@@ -16,7 +16,7 @@
     <li>Open github destop, write something in summary area</li>
   <li>Than click on commit.</li>
     <li>Now click on push</li>
-  <li> Good Work. Just g to github to verify that pdf has been updated</li>
+  <li> Good Work. Just go to github to verify that pdf has been updated</li>
 </ol> 
 
 Thank you :)
