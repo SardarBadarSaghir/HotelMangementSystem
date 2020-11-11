@@ -1,7 +1,7 @@
 <h1>HotelMangementSystem And Lab Updates</h1>
 
 =======
-#Labs Guidline
+<h2>Labs Guidline</h2>
 0. Click pull in desktop after open github desktop app
 1. Open "Labs Common Solution And Students Work.docx" 
 2. Add your work in your section of docx files
