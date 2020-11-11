@@ -1,7 +1,7 @@
 <h1>HotelMangementSystem And Lab Updates</h1>
 
 =======
-<h2>Labs Guidline</h2>
+<h2>Labs Guideline</h2>
  <ol>
   <li>
  Click pull in desktop after open github desktop app</li>
