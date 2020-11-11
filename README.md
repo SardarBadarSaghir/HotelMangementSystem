@@ -4,7 +4,7 @@
 <h2>Labs Guideline</h2>
  <ol>
   <li>
- Click pull in desktop after open github desktop app</li>
+ Click pull in github desktop app</li>
   <li>Open "Labs Common Solution And Students Work.docx" 
 </li>
   <li>Add your work in your section of docx files
