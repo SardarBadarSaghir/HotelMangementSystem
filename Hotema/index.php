@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-include "./componets/head.php";
-include "./signIn.php";
-include "./componets/footer.php";
 
-?>    
-
-
+</body>
 </html>
