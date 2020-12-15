@@ -37,10 +37,17 @@ public class FinanceUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        annualTable = new javax.swing.JTable();
+        monthlyFinance = new javax.swing.JLabel();
+        annualFinance = new javax.swing.JLabel();
+        dailyFinance = new javax.swing.JLabel();
+        dailyTotalValue = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        monthlyTotalValue = new javax.swing.JLabel();
+        annualTotalValue = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,7 +92,7 @@ public class FinanceUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        background.setBackground(new java.awt.Color(0, 88, 122));
+        background.setBackground(new java.awt.Color(15, 48, 87));
 
         jTable1.setAutoCreateRowSorter(true);
         jTable1.setBackground(new java.awt.Color(0, 88, 122));
@@ -113,10 +120,10 @@ public class FinanceUI extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jTable3.setAutoCreateRowSorter(true);
-        jTable3.setBackground(new java.awt.Color(0, 88, 122));
-        jTable3.setForeground(new java.awt.Color(231, 231, 222));
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        annualTable.setAutoCreateRowSorter(true);
+        annualTable.setBackground(new java.awt.Color(0, 88, 122));
+        annualTable.setForeground(new java.awt.Color(231, 231, 222));
+        annualTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -124,65 +131,134 @@ public class FinanceUI extends javax.swing.JFrame {
                 "Room No", "Current Price", "Revenu", "Highest Price", "Bookings"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(annualTable);
 
-        jLabel1.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("MONTLY FINANCE");
+        monthlyFinance.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
+        monthlyFinance.setForeground(java.awt.Color.white);
+        monthlyFinance.setText("MONTLY FINANCE");
 
-        jLabel2.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
-        jLabel2.setForeground(java.awt.Color.white);
-        jLabel2.setText("WEEKLY FINANCE");
+        annualFinance.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
+        annualFinance.setForeground(java.awt.Color.white);
+        annualFinance.setText("Annual FINANCE");
 
-        jLabel3.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
-        jLabel3.setForeground(java.awt.Color.white);
-        jLabel3.setText("DAILY FINANCE");
+        dailyFinance.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
+        dailyFinance.setForeground(java.awt.Color.white);
+        dailyFinance.setText("DAILY FINANCE");
+
+        dailyTotalValue.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        dailyTotalValue.setForeground(new java.awt.Color(231, 231, 222));
+        dailyTotalValue.setText("4");
+
+        jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(231, 231, 222));
+        jLabel5.setText("Total Revenu:");
+
+        jLabel6.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(231, 231, 222));
+        jLabel6.setText("Total Revenu:");
+
+        monthlyTotalValue.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        monthlyTotalValue.setForeground(new java.awt.Color(231, 231, 222));
+        monthlyTotalValue.setText("4");
+
+        annualTotalValue.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        annualTotalValue.setForeground(new java.awt.Color(231, 231, 222));
+        annualTotalValue.setText("4");
+
+        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(231, 231, 222));
+        jLabel9.setText("4");
+
+        jLabel10.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(231, 231, 222));
+        jLabel10.setText("Total Revenu:");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(41, 41, 41))
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(1, 1, 1))
+                        .addContainerGap()
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(monthlyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(41, 41, 41))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))))
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE))
+                        .addGap(122, 122, 122)
+                        .addComponent(jLabel6)
+                        .addGap(53, 53, 53)
+                        .addComponent(monthlyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addComponent(jScrollPane1)
+                                .addGap(1, 1, 1))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGap(58, 58, 58)
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(backgroundLayout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addGap(53, 53, 53)
+                                        .addComponent(dailyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(dailyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel10)
+                                .addGap(47, 47, 47)
+                                .addComponent(annualTotalValue)
+                                .addGap(208, 208, 208)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(annualFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(168, Short.MAX_VALUE))))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                        .addGap(42, 42, 42)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(dailyTotalValue))
+                        .addGap(5, 5, 5)
+                        .addComponent(dailyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
                         .addGap(52, 52, 52)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel9))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(annualTotalValue)
+                                    .addComponent(jLabel10))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                        .addGap(28, 28, 28))
+                        .addComponent(annualFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6))
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel1)
+                        .addGap(43, 43, 43)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(monthlyTotalValue))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(monthlyFinance)
                         .addGap(38, 38, 38)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18))
@@ -257,18 +333,25 @@ public class FinanceUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel annualFinance;
+    private javax.swing.JTable annualTable;
+    private javax.swing.JLabel annualTotalValue;
     private javax.swing.JPanel appbar;
     private javax.swing.JButton back;
     private javax.swing.JPanel background;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel dailyFinance;
+    private javax.swing.JLabel dailyTotalValue;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
+    private javax.swing.JLabel monthlyFinance;
+    private javax.swing.JLabel monthlyTotalValue;
     private javax.swing.JPanel parent;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
