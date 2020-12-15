@@ -33,9 +33,9 @@ public class FinanceUI extends javax.swing.JFrame {
         back = new javax.swing.JButton();
         background = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        monthlyTable = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        dailyTable = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         annualTable = new javax.swing.JTable();
         monthlyFinance = new javax.swing.JLabel();
@@ -46,7 +46,6 @@ public class FinanceUI extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         monthlyTotalValue = new javax.swing.JLabel();
         annualTotalValue = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,10 +93,10 @@ public class FinanceUI extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(15, 48, 87));
 
-        jTable1.setAutoCreateRowSorter(true);
-        jTable1.setBackground(new java.awt.Color(0, 88, 122));
-        jTable1.setForeground(new java.awt.Color(231, 231, 222));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        monthlyTable.setAutoCreateRowSorter(true);
+        monthlyTable.setBackground(new java.awt.Color(0, 88, 122));
+        monthlyTable.setForeground(new java.awt.Color(231, 231, 222));
+        monthlyTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -105,12 +104,12 @@ public class FinanceUI extends javax.swing.JFrame {
                 "Room No", "Current Price", "Revenu", "Highest Price", "Bookings"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(monthlyTable);
 
-        jTable2.setAutoCreateRowSorter(true);
-        jTable2.setBackground(new java.awt.Color(0, 88, 122));
-        jTable2.setForeground(new java.awt.Color(231, 231, 222));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        dailyTable.setAutoCreateRowSorter(true);
+        dailyTable.setBackground(new java.awt.Color(0, 88, 122));
+        dailyTable.setForeground(new java.awt.Color(231, 231, 222));
+        dailyTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -118,7 +117,7 @@ public class FinanceUI extends javax.swing.JFrame {
                 "Room No", "Current Price", "Revenu", "Highest Price", "Bookings"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(dailyTable);
 
         annualTable.setAutoCreateRowSorter(true);
         annualTable.setBackground(new java.awt.Color(0, 88, 122));
@@ -165,10 +164,6 @@ public class FinanceUI extends javax.swing.JFrame {
         annualTotalValue.setForeground(new java.awt.Color(231, 231, 222));
         annualTotalValue.setText("4");
 
-        jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(231, 231, 222));
-        jLabel9.setText("4");
-
         jLabel10.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(231, 231, 222));
         jLabel10.setText("Total Revenu:");
@@ -195,35 +190,35 @@ public class FinanceUI extends javax.swing.JFrame {
                         .addGap(122, 122, 122)
                         .addComponent(jLabel6)
                         .addGap(53, 53, 53)
-                        .addComponent(monthlyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(monthlyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addGap(144, 144, 144)))
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addGap(13, 13, 13))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGap(65, 65, 65)
+                                .addComponent(jLabel5)
+                                .addGap(44, 44, 44)
+                                .addComponent(dailyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(dailyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(backgroundLayout.createSequentialGroup()
-                                .addComponent(jScrollPane1)
-                                .addGap(1, 1, 1))
-                            .addGroup(backgroundLayout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(backgroundLayout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(53, 53, 53)
-                                        .addComponent(dailyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(dailyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(backgroundLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel10)
-                                .addGap(47, 47, 47)
+                                .addGap(116, 116, 116)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(75, 75, 75)
                                 .addComponent(annualTotalValue)
-                                .addGap(208, 208, 208)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(annualFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(168, Short.MAX_VALUE))))
+                                .addGap(133, 133, 133))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addComponent(annualFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(168, 168, 168))))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,19 +231,14 @@ public class FinanceUI extends javax.swing.JFrame {
                             .addComponent(dailyTotalValue))
                         .addGap(5, 5, 5)
                         .addComponent(dailyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(backgroundLayout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(jLabel9))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(annualTotalValue)
-                                    .addComponent(jLabel10))))
+                        .addGap(33, 33, 33)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                        .addGap(26, 26, 26)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(annualTotalValue)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(annualFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(annualFinance, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
                         .addGap(6, 6, 6))
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
@@ -256,7 +246,7 @@ public class FinanceUI extends javax.swing.JFrame {
                         .addGap(43, 43, 43)
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(monthlyTotalValue))
+                            .addComponent(monthlyTotalValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(monthlyFinance)
                         .addGap(38, 38, 38)
@@ -340,17 +330,16 @@ public class FinanceUI extends javax.swing.JFrame {
     private javax.swing.JButton back;
     private javax.swing.JPanel background;
     private javax.swing.JLabel dailyFinance;
+    private javax.swing.JTable dailyTable;
     private javax.swing.JLabel dailyTotalValue;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JLabel monthlyFinance;
+    private javax.swing.JTable monthlyTable;
     private javax.swing.JLabel monthlyTotalValue;
     private javax.swing.JPanel parent;
     private javax.swing.JLabel title;
