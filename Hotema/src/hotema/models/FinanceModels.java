@@ -39,6 +39,7 @@ public class FinanceModels {
     
     public static void main(String[] args) {
       DbmsConnection hotema = new DbmsConnection("Alirohan11");
-
+  String qurey = "USE DreamHome; Drop DATABASE Fun;";
+        hotema.cudQuery(qurey);
     }
 }
