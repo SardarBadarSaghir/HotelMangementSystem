@@ -96,6 +96,7 @@ public class DbmsConnection {
 
     }
 
+//    IMPLEMENTED BY SARDAR BADAR
 //CREATE, UPDATE AND DELETE QUERY SUPPORT. SELECT STATEMENT IS NOT SUPPORT IN THIS FUNCTION
     public void cudQuery(String statements) {
 
@@ -112,10 +113,38 @@ public class DbmsConnection {
             }
         }
 
+//    IMPLEMENTED BY SARDAR BADAR
+// GET DATA FROM DATABASE BY THE IMPLEMENTATION SELECT QUERY IMPLEMENTED SARDAR BADAR
+    public ResultSet selectQuery(String query){       
+        try {
+        Statement stmt = this.con.createStatement();
+        ResultSet result = stmt.executeQuery(query);
+            
+            return result;
+        } catch (SQLException e) {
+            System.out.println("Error : "+e.toString());
+            return null;
+        }
+        
+    }
+    
     public static void main(String[] args) {
-                DbmsConnection hotema = new DbmsConnection("Alirohan11");
-        String qurey = "USE DreamHome;Drop DATABASE hotema;";
+        DbmsConnection hotema = new DbmsConnection("Alirohan11");
+        String qurey = "USE DreamHome;";
         hotema.cudQuery(qurey);
-        hotema.getDatabaseConnection();
+        ResultSet rs =  hotema.selectQuery("SELECT * FROM Branch;");
+        try {
+          while( rs.next()) {
+          System.out.println(rs.getString("city"));
+          
+        }rs.close();  
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+        }
+        
+      
+//        hotema.getDatabaseConnection();
     } 
+
+
 }
