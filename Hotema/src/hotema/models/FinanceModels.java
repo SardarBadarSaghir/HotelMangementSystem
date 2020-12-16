@@ -11,4 +11,34 @@ package hotema.models;
  */
 public class FinanceModels {
     
+        public void insertData(){
+//        INSERT DATA
+        
+    }
+//   todo:ASSIGN TO AWAIS
+    public String[] getMonthlyFinanceData(){
+//      IMPLEMENT TEST TO GET DATA
+        String[] get = {"hi", "How"};
+        return get;      
+    }
+    
+//   todo:ASSIGN TO BADAR
+        public String[] getDailyFinanceData(){
+//      IMPLEMENT TEST TO GET DATA
+        String[] get = {"hi", "How"};
+        return get;      
+    }
+//   todo:ASSIGN TO HASSAN ALI JADOON
+
+       public String[] getAnnualFinanceData(){
+//      IMPLEMENT TEST TO GET DATA
+        String[] get = {"hi", "How"};
+        return get;      
+    }
+    
+    
+    public static void main(String[] args) {
+      DbmsConnection hotema = new DbmsConnection("Alirohan11");
+
+    }
 }
