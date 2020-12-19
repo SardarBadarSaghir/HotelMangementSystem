@@ -10,14 +10,14 @@
 <p> 5. Genreating Pdf For Daily Finance</p>
 </br>
 <h4>Awais</h4>
-<p>Integrating Final Modules </p>
+<p> 1. Integrating Final Modules </p>
 <p> 2. Models For Monthly Finance</p>
 <p> 3. Controller For Monthly Finance</p>
 <p> 4. Genreating View For Monthly Finance</p>
 <p> 5. Genreating Pdf For Monthly Finance</p>
 </br>
 <h4>Awais</h4>
-<p>Adding Report Genration Buttons in UI and Pdf Conversion Support </p>
+<p> 1. Adding Report Genration Buttons in UI and Pdf Conversion Support </p>
 <p> 2. Models For Annual Finance</p>
 <p> 3. Controller For Annual Finance</p>
 <p> 4. Genreating View For Annual Finance</p>
