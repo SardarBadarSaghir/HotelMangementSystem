@@ -1,7 +1,7 @@
-<h1>Project:HotelMangementSystem</h1>
+<h1>Project:Hotel Mangement System</h1>
 
 <h2>TasK Assign To Members</h2>
-<h3>Finance Moudle Task</h3>
+<h3>1. Finance Moudle Task</h3>
 <h4> SARDAR BADAR</h4>
 <p> 1. Models Database Connection</p>
 <p> 2. Models For Daily Finance</p>
@@ -25,8 +25,6 @@
 <br />
 <hr />
 
-
-=======
 
 <h1> Labs</h1>
 <h2>Labs Guideline</h2>
