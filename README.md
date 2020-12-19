@@ -1,6 +1,6 @@
 <h1>Project:Hotel Mangement System</h1>
 
-<h2>TasK Assign To Members</h2>
+<h2>Task Assign To Members</h2>
 <h3>1. Finance Moudle Task</h3>
 <h4> SARDAR BADAR</h4>
 <p> 1. Modeling Database Connection (Completed)</p>
