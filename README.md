@@ -4,15 +4,13 @@
 <h3>1. Finance Moudle Task</h3>
 <h4> SARDAR BADAR</h4>
 <p> 1. Modeling Database Connection (Completed)</p>
-<p> 2. Models For Daily Finance</p>
+<p> 2. Models For Daily Finance (On Progress)</p>
 <p> 3. Controller For Daily Finance</p>
 <p> 4. Genreating UI For Daily Finance (Completed)</p>
 <p> 5. Genreating Pdf For Daily Finance</p>
-<p> 6. Conceptual Design </p>
-<p> 7. Logical Design </p>
-<p> 8. Physical Design</p>
-<p> 9. ER Digram  (Completed)</p>
-<p> 10. Sql queries</p>
+<p> 6. Conceptual Design (Completed)</p>
+<p> 7. ER Digram  (Completed)</p>
+<p> 8. Sql queries</p>
 </br>
 <h4>Awais</h4>
 <p> 1. Integrating Final Modules </p>
@@ -20,11 +18,9 @@
 <p> 3. Controller For Monthly Finance</p>
 <p> 4. Genreating View For Monthly Finance</p>
 <p> 5. Genreating Pdf For Monthly Finance</p>
-<p> 6. Conceptual Design </p>
-<p> 7. Logical Design </p>
-<p> 8. Physical Design</p>
-<p> 9. ER Digram  (Completed)</p>
-<p> 10. Sql queries</p>
+<p> 6. Physical Design</p>
+<p> 7. ER Digram  (Completed)</p>
+<p> 8. Sql queries</p>
 
 </br>
 <h4>Hassan Ali Jaddon</h4>
@@ -33,11 +29,9 @@
 <p> 3. Controller For Annual Finance</p>
 <p> 4. Genreating View For Annual Finance</p>
 <p> 5. Genreating Pdf For Annual Finance</p>
-<p> 6. Conceptual Design </p>
-<p> 7. Logical Design </p>
-<p> 8. Physical Design</p>
-<p> 9. ER Digram  (Completed)</p>
-<p> 10. Sql queries</p>
+<p> 6. Logical Design </p>
+<p> 7. ER Digram  (Completed)</p>
+<p> 8. Sql queries</p>
 
 <br />
 <hr />
