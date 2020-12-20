@@ -9,29 +9,35 @@
 <p> 4. Genreating UI For Daily Finance (Completed)</p>
 <p> 5. Genreating Pdf For Daily Finance</p>
 <p> 6. Conceptual Design (Completed)</p>
-<p> 7. ER Digram  (Completed)</p>
-<p> 8. Sql queries</p>
+<p> 7. Physical Design</p>
+<p> 8. Logical Design </p>
+<p> 9. ER Digram  (Completed)</p>
+<p> 10. Sql queries(Completed)</p>
 </br>
 <h4>Awais</h4>
 <p> 1. Integrating Final Modules </p>
-<p> 2. Models For Monthly Finance</p>
+<p> 2. Models For Monthly Finance(On Progress)</p>
 <p> 3. Controller For Monthly Finance</p>
-<p> 4. Genreating View For Monthly Finance</p>
+<p> 4. Genreating Design For Monthly Finance(Completed)</p>
 <p> 5. Genreating Pdf For Monthly Finance</p>
 <p> 6. Physical Design</p>
-<p> 7. ER Digram  (Completed)</p>
-<p> 8. Sql queries</p>
+<p> 7. Logical Design </p>
+<p> 8. ER Digram  (Completed)</p>
+<p> 9. Conceptual Design (Completed)</p>
+<p> 10. Sql queries (Completed)</p>
 
 </br>
 <h4>Hassan Ali Jaddon</h4>
 <p> 1. Adding Report Genration Buttons in UI and Pdf Conversion Support </p>
 <p> 2. Models For Annual Finance</p>
-<p> 3. Controller For Annual Finance</p>
-<p> 4. Genreating View For Annual Finance</p>
+<p> 3. Controller For Annual Finance(On Progress)</p>
+<p> 4. Genreating User Interface For Annual Finance(Completed)</p>
 <p> 5. Genreating Pdf For Annual Finance</p>
-<p> 6. Logical Design </p>
-<p> 7. ER Digram  (Completed)</p>
-<p> 8. Sql queries</p>
+<p> 6. Conceptual Design (Completed)</p>
+<p> 7. Physical Design</p>
+<p> 8. Logical Design</p>
+<p> 9. ER Digram  (Completed)</p>
+<p> 10. Sql queries(Completed)</p>
 
 <br />
 <hr />
