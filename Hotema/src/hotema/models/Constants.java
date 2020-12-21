@@ -29,7 +29,7 @@ public final class Constants{
 "            GROUP BY o2.roomId\n" +
 "        ) b ON a.roomId = b.roomId AND\n" +
 "                a.price_o = b.maxPrice)     \n" +
-"       INNER JOIN Rooms r on  r.roomId = a.roomId) WHERE a.date_o ="+(new SimpleDateFormat("yyyy-MM-dd").format((new Date(System.currentTimeMillis()))))+";" ;
+"       INNER JOIN Rooms r on  r.roomId = a.roomId) WHERE a.date_o = '"+(new SimpleDateFormat("yyyy-MM-dd").format((new Date(System.currentTimeMillis()))))+"' ;" ;
 
 
 

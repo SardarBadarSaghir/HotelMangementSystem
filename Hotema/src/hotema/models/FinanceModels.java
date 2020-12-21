@@ -9,6 +9,7 @@ package hotema.models;
  * @author badar
  */
 import java.sql.*;
+import java.util.*;
 
 public class FinanceModels extends DbmsConnection{
 
@@ -36,20 +37,28 @@ public class FinanceModels extends DbmsConnection{
 //   todo:ASSIGN TO BADAR
         public String getDailyFinanceData(){
 //      IMPLEMENT TEST TO GET DATA
-         String get ="";
+
+       
+        List<String> roomList=new ArrayList<String>(); 
         ResultSet rs =  super.selectQuery(Constants.SELECT_DAILY_FINANCE);
         try {
           while( rs.next()) {
-         get =  rs.getString("roomNO").toString();
-              System.out.println(get);
+         
+         roomList.add(rs.getString("roomNO").toString());
+//    DISTINCT a.roomId as roomNO , b.maxPrice as highestPrice, r.price_r as currentPrice, \n" +
+//"b.revenu as revenu,\n" +
+//"b.countr as booking\n"     
           
         }rs.close();  
         } catch (SQLException e) {
             System.out.println(e.toString());
         }
+            for (int i = 0; i < roomList.size(); i++) {
+                System.out.println(roomList.get(i));
+                
+            }
         
-        
-        return get ;      
+        return "dd" ;      
     }
 //   todo:ASSIGN TO HASSAN ALI JADOON
 
