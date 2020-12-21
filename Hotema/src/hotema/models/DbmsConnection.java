@@ -17,7 +17,7 @@ public class DbmsConnection {
 
     private String conDB = "jdbc:sqlserver://localhost:1433;user=sa;password=";
     private Connection con;
-    final String DEFAULT_DATABASE = "Hotema";
+    final String DEFAULT_DATABASE = "hotema";
 
     public DbmsConnection(String password) {
         this.conDB = this.conDB + password + ";" + "databaseName=master;";
@@ -106,6 +106,7 @@ public class DbmsConnection {
             try {
                  Statement stmt = this.con.createStatement();
                 stmt.executeUpdate(statements);
+                System.out.println("SucessFully CREATED");
 
                 con.commit();
             } catch (SQLException e) {
