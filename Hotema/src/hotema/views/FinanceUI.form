@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -71,19 +71,31 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="back" min="-2" pref="83" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                      <Component id="title" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="monthlyPdf" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="annualPdf" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="dailyPdf" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="title" pref="195" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
+                      <Component id="refresh" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="title" alignment="3" pref="50" max="32767" attributes="0"/>
                           <Component id="back" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="monthlyPdf" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="annualPdf" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="refresh" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dailyPdf" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -119,6 +131,41 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="annualPdf">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Genrate Anuula Report"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="annualPdfActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="dailyPdf">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Genrate Daily Report"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dailyPdfActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="monthlyPdf">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a4" green="a4" red="a4" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Genrate Montly Report"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="monthlyPdfActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="refresh">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="refresh"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refreshActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -357,7 +404,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Annual FINANCE"/>
+                <Property name="text" type="java.lang.String" value="ANNUAL FINANCE"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="dailyFinance">

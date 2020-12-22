@@ -31,6 +31,10 @@ public class FinanceUI extends javax.swing.JFrame {
         appbar = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         back = new javax.swing.JButton();
+        annualPdf = new javax.swing.JButton();
+        dailyPdf = new javax.swing.JButton();
+        monthlyPdf = new javax.swing.JButton();
+        refresh = new javax.swing.JButton();
         background = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         monthlyTable = new javax.swing.JTable();
@@ -70,6 +74,35 @@ public class FinanceUI extends javax.swing.JFrame {
             }
         });
 
+        annualPdf.setText("Genrate Anuula Report");
+        annualPdf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                annualPdfActionPerformed(evt);
+            }
+        });
+
+        dailyPdf.setText("Genrate Daily Report");
+        dailyPdf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dailyPdfActionPerformed(evt);
+            }
+        });
+
+        monthlyPdf.setBackground(new java.awt.Color(164, 164, 164));
+        monthlyPdf.setText("Genrate Montly Report");
+        monthlyPdf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                monthlyPdfActionPerformed(evt);
+            }
+        });
+
+        refresh.setText("refresh");
+        refresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout appbarLayout = new javax.swing.GroupLayout(appbar);
         appbar.setLayout(appbarLayout);
         appbarLayout.setHorizontalGroup(
@@ -77,9 +110,17 @@ public class FinanceUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, appbarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(221, 221, 221)
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(244, 244, 244))
+                .addGap(18, 18, 18)
+                .addComponent(monthlyPdf)
+                .addGap(18, 18, 18)
+                .addComponent(annualPdf)
+                .addGap(18, 18, 18)
+                .addComponent(dailyPdf)
+                .addGap(34, 34, 34)
+                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                .addGap(218, 218, 218)
+                .addComponent(refresh)
+                .addContainerGap())
         );
         appbarLayout.setVerticalGroup(
             appbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,7 +128,11 @@ public class FinanceUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(appbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(back))
+                    .addComponent(back)
+                    .addComponent(monthlyPdf)
+                    .addComponent(annualPdf)
+                    .addComponent(refresh)
+                    .addComponent(dailyPdf))
                 .addContainerGap())
         );
 
@@ -138,7 +183,7 @@ public class FinanceUI extends javax.swing.JFrame {
 
         annualFinance.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
         annualFinance.setForeground(java.awt.Color.white);
-        annualFinance.setText("Annual FINANCE");
+        annualFinance.setText("ANNUAL FINANCE");
 
         dailyFinance.setFont(new java.awt.Font("Waree", 1, 36)); // NOI18N
         dailyFinance.setForeground(java.awt.Color.white);
@@ -287,6 +332,22 @@ public class FinanceUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_backActionPerformed
 
+    private void annualPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annualPdfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_annualPdfActionPerformed
+
+    private void dailyPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dailyPdfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dailyPdfActionPerformed
+
+    private void monthlyPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monthlyPdfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_monthlyPdfActionPerformed
+
+    private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_refreshActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -324,12 +385,14 @@ public class FinanceUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel annualFinance;
+    private javax.swing.JButton annualPdf;
     private javax.swing.JTable annualTable;
     private javax.swing.JLabel annualTotalValue;
     private javax.swing.JPanel appbar;
     private javax.swing.JButton back;
     private javax.swing.JPanel background;
     private javax.swing.JLabel dailyFinance;
+    private javax.swing.JButton dailyPdf;
     private javax.swing.JTable dailyTable;
     private javax.swing.JLabel dailyTotalValue;
     private javax.swing.JLabel jLabel10;
@@ -339,9 +402,11 @@ public class FinanceUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel monthlyFinance;
+    private javax.swing.JButton monthlyPdf;
     private javax.swing.JTable monthlyTable;
     private javax.swing.JLabel monthlyTotalValue;
     private javax.swing.JPanel parent;
+    private javax.swing.JButton refresh;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

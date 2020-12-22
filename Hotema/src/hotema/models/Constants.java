@@ -85,7 +85,7 @@ public final class Constants{
 
     public static void main(String[] args) throws ParseException {
 //        System.out.println(CREATE_TABLES_QUERY);
- System.out.println(SELECT_DAILY_FINANCE);
+ System.out.println(Constants.SELECT_DAILY_FINANCE);
 
     }
 }

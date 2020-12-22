@@ -136,6 +136,7 @@ public class DbmsConnection {
         ResultSet rs =  hotema.selectQuery("SELECT * FROM Branch;");
         try {
           while( rs.next()) {
+//              System.out.println(rs.next());
           System.out.println(rs.getString("city"));
           
         }rs.close();  
