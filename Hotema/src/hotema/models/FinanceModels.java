@@ -37,14 +37,26 @@ public class FinanceModels extends DbmsConnection{
 //   todo:ASSIGN TO BADAR
         public String getDailyFinanceData(){
 //      IMPLEMENT TEST TO GET DATA
-
        
         List<String> roomList=new ArrayList<String>(); 
+        List<String> maxPriceList=new ArrayList<String>(); 
+        List<String> currentPriceList = new ArrayList<String>();
+                List<String> revenuList = new ArrayList<String>(); 
+
+                        List<String> bookingList = new ArrayList<String>(); 
+
+
         ResultSet rs =  super.selectQuery(Constants.SELECT_DAILY_FINANCE);
         try {
           while( rs.next()) {
          
          roomList.add(rs.getString("roomNO").toString());
+         maxPriceList.add(rs.getString("highestPrice").toString());
+         currentPriceList.add(rs.getString("currentPrice").toString());
+         revenuList.add(rs.getString("revenu").toString());
+         bookingList.add(rs.getString("booking").toString());
+       
+
 //    DISTINCT a.roomId as roomNO , b.maxPrice as highestPrice, r.price_r as currentPrice, \n" +
 //"b.revenu as revenu,\n" +
 //"b.countr as booking\n"     
@@ -54,7 +66,7 @@ public class FinanceModels extends DbmsConnection{
             System.out.println(e.toString());
         }
             for (int i = 0; i < roomList.size(); i++) {
-                System.out.println(roomList.get(i));
+                System.out.println(roomList.get(i)+" "+maxPriceList.get(i)+currentPriceList.get(i)+revenuList.get(i)+bookingList.get(i));
                 
             }
         
