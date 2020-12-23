@@ -1,0 +1,8 @@
+			Daily Report
+Room NO : 1
+Maximum Price : 100022.4, Current Price :100022.4, Revenu : 500112.0, Booking : 5
+
+Room NO : 3
+Maximum Price : 10030.4, Current Price :10030.4, Revenu : 123364.79999999997, Booking : 13
+
+Total Revenu = 623476.8

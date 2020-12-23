@@ -7,7 +7,7 @@
 <p> 2. Models For Daily Finance (Completed)</p>
 <p> 3. Controller For Daily Finance (Completed)</p>
 <p> 4. Genreating UI For Daily Finance (Completed)</p>
-<p> 5. Genreating Pdf For Daily Finance</p>
+<p> 5. Genreating TEXT REAPORT For Daily Finance (Completed)</p>
 <p> 6. Conceptual Design (Completed)</p>
 <p> 7. Physical Design</p>
 <p> 8. Logical Design </p>

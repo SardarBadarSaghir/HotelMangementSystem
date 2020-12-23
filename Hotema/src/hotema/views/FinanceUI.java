@@ -9,6 +9,8 @@ import hotema.controllers.FinanceController;
 import hotema.models.FinanceModels;
 import java.awt.Component;
 import java.awt.Window;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Dictionary;
@@ -99,7 +101,6 @@ public class FinanceUI extends javax.swing.JFrame {
             rowData[2] = list.get(i).currentPrice;
             rowData[3] = list.get(i).revenu;
             rowData[4] = list.get(i).booking;
-
             model.addRow(rowData);
         }
 
@@ -438,10 +439,19 @@ public class FinanceUI extends javax.swing.JFrame {
 
     private void dailyPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dailyPdfActionPerformed
         // TODO add your handling code here:
-       JOptionPane.showMessageDialog(frame,
-    "Pdf For daily report has been Created",
-    "Success",
-    JOptionPane.PLAIN_MESSAGE);
+        
+            
+            
+      
+FinanceController finaceUI = new FinanceController();
+
+finaceUI.createPDF("Daily Report");
+    
+               
+                    JOptionPane.showMessageDialog(frame,
+                 "Pdf For daily report has been Created",
+                 "Success",
+                    JOptionPane.PLAIN_MESSAGE);
 
         
     }//GEN-LAST:event_dailyPdfActionPerformed
@@ -460,6 +470,7 @@ public class FinanceUI extends javax.swing.JFrame {
 
     private void dailyPdfMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dailyPdfMouseClicked
         // TODO add your handling code here:
+               
        
     }//GEN-LAST:event_dailyPdfMouseClicked
 
