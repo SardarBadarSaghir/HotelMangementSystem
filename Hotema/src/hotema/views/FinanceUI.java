@@ -5,17 +5,93 @@
  */
 package hotema.views;
 
+import hotema.models.FinanceModels;
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author badar
  */
 public class FinanceUI extends javax.swing.JFrame {
 
+    List<String> roomList = new ArrayList<>();
+    List<String> maxPriceList = new ArrayList<>();
+    List<String> currentPriceList = new ArrayList<>();
+    List<String> revenuList = new ArrayList<>();
+    List<String> bookingList = new ArrayList<>();
+    Dictionary<Integer, List> dailyFinanceDictionary;
+
     /**
      * Creates new form FinanceUI
+     *
+     * @param dailyFinanceDictionary
      */
-    public FinanceUI() {
+    public FinanceUI(Dictionary<Integer, List> dailyFinanceDictionary) {
+        this.dailyFinanceDictionary = dailyFinanceDictionary;
+        System.out.println("UI");
+        for (int i = 0; i < dailyFinanceDictionary.get(0).size(); i++) {
+            roomList.add((String) dailyFinanceDictionary.get(0).get(i));
+            maxPriceList.add((String) dailyFinanceDictionary.get(1).get(i));
+            currentPriceList.add((String) dailyFinanceDictionary.get(2).get(i));
+            revenuList.add((String) dailyFinanceDictionary.get(3).get(i));
+            bookingList.add((String) dailyFinanceDictionary.get(4).get(i));
+
+        }
         initComponents();
+        this.addrow();
+    }
+
+    public class DailyData {
+
+        public String room;
+        public String maxPrice;
+        public String currentPrice;
+        public String revenu;
+        public String booking;
+
+        public DailyData(String room, String maxPrice, String currentPrice, String revenu, String booking) {
+            this.room = room;
+            this.maxPrice = maxPrice;
+            this.currentPrice = currentPrice;
+            this.revenu = revenu;
+            this.booking = booking;
+        }
+    }
+
+    public ArrayList DataList() {
+        ArrayList<DailyData> list = new ArrayList<>();
+
+        for (int i = 0; i < dailyFinanceDictionary.get(0).size(); i++) {
+            String rm = (String) dailyFinanceDictionary.get(0).get(i);
+            String mp = (String) dailyFinanceDictionary.get(1).get(i);
+            String cp = (String) dailyFinanceDictionary.get(2).get(i);
+            String rv = (String) dailyFinanceDictionary.get(3).get(i);
+            String bk = (String) dailyFinanceDictionary.get(4).get(i);
+            list.add(new DailyData(rm, mp, cp, rv, bk));
+        }
+
+        return list;
+
+    }
+
+    public void addrow() {
+        DefaultTableModel model = (DefaultTableModel) dailyTable.getModel();
+        ArrayList<DailyData> list = DataList();
+        Object rowData[] = new Object[5];
+        for (int i = 0; i < list.size(); i++) {
+            rowData[0] = list.get(i).room;
+            rowData[1] = list.get(i).maxPrice;
+            rowData[2] = list.get(i).currentPrice;
+            rowData[3] = list.get(i).revenu;
+            rowData[4] = list.get(i).booking;
+
+            model.addRow(rowData);
+        }
+
     }
 
     /**
@@ -378,7 +454,12 @@ public class FinanceUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FinanceUI().setVisible(true);
+                FinanceModels hotema = new FinanceModels("Alirohan11");
+             
+
+                Dictionary<Integer, List> newDictionary = new Hashtable<>();
+                newDictionary = hotema.getDailyFinanceData();
+                new FinanceUI(newDictionary).setVisible(true);
             }
         });
     }

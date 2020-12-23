@@ -5,6 +5,8 @@
  */
 package hotema;
 
+import hotema.controllers.FinanceController;
+
 /**
  *
  * @author badar
@@ -16,6 +18,8 @@ public class Hotema {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+       FinanceController finaceUI= new FinanceController();
+       finaceUI.showFinanceUi();
     }
     
 }
