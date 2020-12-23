@@ -18,19 +18,28 @@ import java.util.List;
 public class FinanceController {
 
     public void showFinanceUi() {
-
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 FinanceModels hotema = new FinanceModels("Alirohan11");
-
-                Dictionary<Integer, List> newDictionary = new Hashtable<>();
-                newDictionary = hotema.getDailyFinanceData();
+                
+                Dictionary<Integer, List> newDictionary = dictionary(hotema);
+                
                 new FinanceUI(newDictionary).setVisible(true);
             }
+
+
         });
+        
 
     }
-
+            public Dictionary<Integer, List> dictionary(FinanceModels hotema) {
+                Dictionary<Integer, List> newDictionary = new Hashtable<>();
+                newDictionary = hotema.getDailyFinanceData();
+                return newDictionary;
+            }
+            
     public static void main(String[] args) {
        FinanceController finaceUI= new FinanceController();
        finaceUI.showFinanceUi();

@@ -5,11 +5,16 @@
  */
 package hotema.views;
 
+import hotema.controllers.FinanceController;
 import hotema.models.FinanceModels;
+import java.awt.Component;
+import java.awt.Window;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -24,6 +29,7 @@ public class FinanceUI extends javax.swing.JFrame {
     List<String> revenuList = new ArrayList<>();
     List<String> bookingList = new ArrayList<>();
     Dictionary<Integer, List> dailyFinanceDictionary;
+    private Component frame;
 
     /**
      * Creates new form FinanceUI
@@ -64,7 +70,7 @@ public class FinanceUI extends javax.swing.JFrame {
 
     public ArrayList DataList() {
         ArrayList<DailyData> list = new ArrayList<>();
-
+        float revenu=0;
         for (int i = 0; i < dailyFinanceDictionary.get(0).size(); i++) {
             String rm = (String) dailyFinanceDictionary.get(0).get(i);
             String mp = (String) dailyFinanceDictionary.get(1).get(i);
@@ -72,7 +78,12 @@ public class FinanceUI extends javax.swing.JFrame {
             String rv = (String) dailyFinanceDictionary.get(3).get(i);
             String bk = (String) dailyFinanceDictionary.get(4).get(i);
             list.add(new DailyData(rm, mp, cp, rv, bk));
+            revenu = revenu + Float.parseFloat(rv);
+            
         }
+        
+        System.out.println(revenu);
+        dailyTotalValue.setText(Float.toString(revenu));
 
         return list;
 
@@ -158,6 +169,11 @@ public class FinanceUI extends javax.swing.JFrame {
         });
 
         dailyPdf.setText("Genrate Daily Report");
+        dailyPdf.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dailyPdfMouseClicked(evt);
+            }
+        });
         dailyPdf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dailyPdfActionPerformed(evt);
@@ -193,7 +209,7 @@ public class FinanceUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(dailyPdf)
                 .addGap(34, 34, 34)
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
                 .addGap(218, 218, 218)
                 .addComponent(refresh)
                 .addContainerGap())
@@ -237,7 +253,15 @@ public class FinanceUI extends javax.swing.JFrame {
             new String [] {
                 "Room No", "Current Price", "Revenu", "Highest Price", "Bookings"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(dailyTable);
 
         annualTable.setAutoCreateRowSorter(true);
@@ -311,8 +335,8 @@ public class FinanceUI extends javax.swing.JFrame {
                         .addGap(122, 122, 122)
                         .addComponent(jLabel6)
                         .addGap(53, 53, 53)
-                        .addComponent(monthlyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                        .addGap(144, 144, 144)))
+                        .addComponent(monthlyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addComponent(jScrollPane1)
@@ -324,7 +348,7 @@ public class FinanceUI extends javax.swing.JFrame {
                                 .addGap(65, 65, 65)
                                 .addComponent(jLabel5)
                                 .addGap(44, 44, 44)
-                                .addComponent(dailyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dailyTotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(dailyFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
@@ -335,7 +359,7 @@ public class FinanceUI extends javax.swing.JFrame {
                                 .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(75, 75, 75)
                                 .addComponent(annualTotalValue)
-                                .addGap(133, 133, 133))
+                                .addGap(289, 289, 289))
                             .addGroup(backgroundLayout.createSequentialGroup()
                                 .addGap(45, 45, 45)
                                 .addComponent(annualFinance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -414,6 +438,12 @@ public class FinanceUI extends javax.swing.JFrame {
 
     private void dailyPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dailyPdfActionPerformed
         // TODO add your handling code here:
+       JOptionPane.showMessageDialog(frame,
+    "Pdf For daily report has been Created",
+    "Success",
+    JOptionPane.PLAIN_MESSAGE);
+
+        
     }//GEN-LAST:event_dailyPdfActionPerformed
 
     private void monthlyPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monthlyPdfActionPerformed
@@ -422,7 +452,16 @@ public class FinanceUI extends javax.swing.JFrame {
 
     private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
         // TODO add your handling code here:
+        FinanceController refreshController = new FinanceController();
+     
+        refreshController.showFinanceUi();
+        
     }//GEN-LAST:event_refreshActionPerformed
+
+    private void dailyPdfMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dailyPdfMouseClicked
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_dailyPdfMouseClicked
 
     /**
      * @param args the command line arguments
