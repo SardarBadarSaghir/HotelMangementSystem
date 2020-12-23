@@ -5,7 +5,7 @@
 <h4> SARDAR BADAR</h4>
 <p> 1. Modeling Database Connection (Completed)</p>
 <p> 2. Models For Daily Finance (Completed)</p>
-<p> 3. Controller For Daily Finance (onProgress)</p>
+<p> 3. Controller For Daily Finance (Completed)</p>
 <p> 4. Genreating UI For Daily Finance (Completed)</p>
 <p> 5. Genreating Pdf For Daily Finance</p>
 <p> 6. Conceptual Design (Completed)</p>
