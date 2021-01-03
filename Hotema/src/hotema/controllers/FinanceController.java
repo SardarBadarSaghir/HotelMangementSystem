@@ -14,7 +14,6 @@ import static java.lang.System.out;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
-import org.apache.pdfbox.pdmodel.PDDocument;
 
 /**
  *
