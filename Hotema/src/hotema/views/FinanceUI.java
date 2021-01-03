@@ -181,7 +181,6 @@ public class FinanceUI extends javax.swing.JFrame {
             }
         });
 
-        monthlyPdf.setBackground(new java.awt.Color(164, 164, 164));
         monthlyPdf.setText("Genrate Montly Report");
         monthlyPdf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
